@@ -166,12 +166,14 @@ a{
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .main-container .bottom-bar .left-bar{
     display: flex;
     align-items: center;
     padding-left: 10px;
+    border: 1px solid lime;
 }
 
 .main-container .bottom-bar .left-bar img{
@@ -196,6 +198,66 @@ a{
     font-size: 18px;
 }
 
+/* Middle-bar */
+.main-container .bottom-bar .middle-bar{
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+    border: 1px solid blue;
+}
+
+.main-container .bottom-bar .middle-bar .top-middle-bar ul{
+    display: flex;
+    align-items: flex-end;
+}
+
+.main-container .bottom-bar .middle-bar .top-middle-bar ul li{
+    padding-inline: 10px;
+}
+
+.main-container .bottom-bar .middle-bar .top-middle-bar ul:not(li:nth-child(3)){
+    font-size: 20px;
+}
+
+.main-container .bottom-bar .middle-bar .top-middle-bar ul li:nth-child(3){
+    font-size: 28px;
+    padding-inline: 25px;
+}
+
+.main-container .bottom-bar .middle-bar .bottom-middle-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.line-audio{
+    width: 140px;
+    height: 5px;
+    background-color: grey;
+}
+
+.line-audio .line-audio-white{
+    background-color: white;
+    height: 100%;
+    width: 20%;
+}
+
+
+/* Right bar */
+.main-container .bottom-bar .right-bar{
+    display: flex;
+    align-items: center;
+
+    padding-right: 10px;
+    color: white;
+    border: 1px solid lime;
+}
+
+.main-container .bottom-bar .right-bar i{
+    margin-inline: 8px;
+}
 
 
 
@@ -246,4 +308,36 @@ MEDIA
     .main-container{
         margin-left: 70px;
     }
+
+
+    /* Bottom Bar */
+    /* bottom left bar */
+    .main-container .bottom-bar .left-bar img{
+        width: 45px ;
+        margin-right: 5px;
+    }
+
+    .main-container .bottom-bar .left-bar > div h4{
+        font-size: 15px;
+    }
+
+    .main-container .bottom-bar .left-bar > div i{
+        margin-inline: 0;
+    }
+
+    /* Bottom middle bar */
+    .main-container .bottom-bar .middle-bar .top-middle-bar ul:not(li:nth-child(3))
+    {
+        font-size: 14px;
+    }
+    
+    .main-container .bottom-bar .middle-bar .top-middle-bar ul li:nth-child(3){
+        font-size: 25px;
+        padding-inline: 25px;
+    }
+
+    .main-container .bottom-bar .middle-bar .line-audio{
+        width: 80px;
+    }
 }
+

@@ -286,9 +286,17 @@ MEDIA
 }
 
 @media screen and (min-width: 639px) and (max-width: 878px){
+    /* BOTTOM BAR */
+    /* bttom middle bar */
     .main-container .bottom-bar .middle-bar .line-audio{
         width: 150px;
         color: red;
+    }
+
+
+    /* btm right bar */
+    .main-container .bottom-bar .right-bar .line-audio{
+        width: 70px;   
     }
 }
 
@@ -365,6 +373,12 @@ MEDIA
 
     .main-container .bottom-bar .middle-bar .line-audio{
         width: 80px;
+    }
+
+
+    /* bottom right bar */
+    .main-container .bottom-bar .right-bar .line-audio{
+        width: 70px;   
     }
 }
 

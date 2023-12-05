@@ -29,9 +29,11 @@ a{
     top: 0;
     bottom: 0;
     left: 0;
-    z-index: 1;
+    z-index: 10;
+    width: 250px;
 
     background-color: black;
+    
 }
 
 /* utility navigation bar */
@@ -57,7 +59,6 @@ a{
 .sidebar nav ul{
     margin-top: 10px;
     padding-left: 20px;
-    padding-right: 70px ;
 }
 
 .sidebar nav ul li a{
@@ -72,7 +73,7 @@ a{
 .sidebar nav ul li a > img{
     margin-block: 5px;
     margin-right: 5px;
-    width: 33px;
+    width: 30px;
 }
 
 /* middle navigation bar */
@@ -104,17 +105,96 @@ a{
     font-weight: bold;
 }
 
-/* .sidebar nav:last-child ul > div{
-    border: 1px solid lime;
-} */
-
 .sidebar nav:last-child ul > div li{
     margin-block: 20px;
 }
 
 
-/******** BOTTOMBAR *******/
 
+/********* MAIN CONTAINER  **********/
+.main-container{
+    margin-left: 250px;
+    margin-bottom: 100px;
+    border: 1px solid lime;
+    overflow: scroll;
+    overflow-x: hidden ;
+}
+
+.square{
+    background-color: red;
+    margin: 40px;
+}
+
+
+/************ TOPBAR ************/
+.top-bar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    background-color: #080B12;
+    height: 100px;
+    border: 1px solid white;
+}
+
+.top-bar a{
+    color: white;
+    margin-right: 20px;
+    border: 1px solid white;
+    padding: 12px 40px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+
+/******** BOTTOMBAR *******/
+.main-container .bottom-bar{
+    background: #282828;
+    /* background: linear-gradient(to right, #ae2896, #509bf5); */
+    border: 1px solid red;
+    
+    position:fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    
+    height: 100px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-container .bottom-bar .left-bar{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.main-container .bottom-bar .left-bar img{
+    width: 70px ;
+    margin-right: 8px;
+    
+}
+
+.main-container .bottom-bar .left-bar > div{
+    margin-right: 20px;
+    color: white;
+}
+
+.main-container .bottom-bar .left-bar > div p{
+    font-size: 14px;
+    color: #797979;
+}
+
+.main-container .bottom-bar .left-bar i{
+    color: #797979;
+    margin-inline: 10px;
+    font-size: 18px;
+}
 
 
 
@@ -125,6 +205,10 @@ MEDIA
 ******************************************************************************/
 
 @media screen and (max-width: 552px){
+    .sidebar {
+        width: 70px;
+    }
+
     .sidebar nav:last-child{
         display: none;
     }
@@ -135,10 +219,9 @@ MEDIA
 
     .sidebar nav ul{
         margin-top: 10px;
-        padding-inline: 20px;
+        
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
     }
 
     .sidebar nav ul .small-logo{
@@ -147,7 +230,7 @@ MEDIA
 
     .sidebar nav ul .small-logo img{
         display: block;
-        width:38px;
+        width:30px;
     }
 
     .sidebar nav ul li{
@@ -156,5 +239,11 @@ MEDIA
 
     .sidebar nav ul li a span{
         display: none;
+    }
+
+
+    /* MAIN CONTAINER */
+    .main-container{
+        margin-left: 70px;
     }
 }

@@ -29,6 +29,7 @@ a{
     top: 0;
     bottom: 0;
     left: 0;
+    z-index: 1;
 
     background-color: black;
 }
@@ -47,6 +48,10 @@ a{
     width: 160px;
     padding-left: 20px;
     padding-top: 15px;
+}
+
+.sidebar nav ul .small-logo img{
+    display: none;
 }
 
 .sidebar nav ul{
@@ -105,4 +110,51 @@ a{
 
 .sidebar nav:last-child ul > div li{
     margin-block: 20px;
+}
+
+
+/******** BOTTOMBAR *******/
+
+
+
+
+
+
+/***************************************************************************** 
+MEDIA 
+******************************************************************************/
+
+@media screen and (max-width: 552px){
+    .sidebar nav:last-child{
+        display: none;
+    }
+
+    .sidebar nav:first-child > img:first-child{
+        display: none;
+    }
+
+    .sidebar nav ul{
+        margin-top: 10px;
+        padding-inline: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sidebar nav ul .small-logo{
+        margin-bottom: 15px;
+    }
+
+    .sidebar nav ul .small-logo img{
+        display: block;
+        width:38px;
+    }
+
+    .sidebar nav ul li{
+        margin-block: 5px;
+    }
+
+    .sidebar nav ul li a span{
+        display: none;
+    }
 }

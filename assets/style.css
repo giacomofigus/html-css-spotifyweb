@@ -39,7 +39,7 @@ img{
     background: black;
     width: 250px;
     height: 100%;
-    border: 1px solid blue;
+    
 }
 
 .app-bottom-bar{
@@ -49,12 +49,14 @@ img{
 }
 
 .app-main-container{
-    
     width: 100%;
+
+    border: 1px solid purple;
 }
 
 .app-main-container .upgrade-bar{
     background-color: rgba(8, 11, 18, 0.7);
+    height: 100px;
 }
 
 .app-main-container .playlist-container{
@@ -138,7 +140,7 @@ img{
 }
 
 
-/* UPGRADE BAR */
+/* UPGRADE BAR CONTENT */
 .upgrade-bar{
     display: flex;
     align-items: center;
@@ -147,9 +149,14 @@ img{
 
 .upgrade-bar a{
     color: white;
-    border: 1px solid white;
-    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
 
+    border: 1px solid white;
+    border-radius: 30px;
+
+    padding: 10px 30px;
+    margin-right: 10px;
 }
 
 

@@ -22,6 +22,7 @@ img{
 }
 
 
+/* LAYOUT SPOTIFY */
 .app-container{
     height: 100vh;
     border: 1px solid white;
@@ -36,7 +37,7 @@ img{
 
 .app-sidebar{
     background: black;
-    width: 200px;
+    width: 250px;
     height: 100%;
     border: 1px solid blue;
 }
@@ -62,4 +63,137 @@ img{
 
 .app-main-container .playlist-container{
     padding-top: 100px;
+}
+
+
+/*********** SIDEBAR CONTENT ***********/
+.app-sidebar nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.app-sidebar nav > img{
+    width: 140px;
+    padding-left: 18px;
+    padding-top: 15px;
+}
+
+.app-sidebar nav .sm-logo {
+    display: none;
+}
+
+.app-sidebar nav ul{
+    margin-top: 10px;
+
+    width: 100%;
+}
+
+.app-sidebar nav ul li a{
+    display: flex;
+    align-items: center;
+
+    font-size: 15px;
+    color: #666666;
+    font-weight: 600;
+
+    padding-left: 20px;
+}
+
+.app-sidebar nav ul .home{
+    border-left: 2px solid #abff2eff;
+}
+
+.app-sidebar nav ul li a > img{
+    margin-block: 5px;
+    margin-right: 10px;
+    width: 28px;
+}
+
+/* middle navigation bar */
+.app-sidebar nav:last-child {
+    color: white;
+    margin-top: 20px;
+}
+
+.app-sidebar nav:last-child .title-nav{
+    margin-left: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.app-sidebar nav:last-child ul .btn-container{
+    display: flex;
+}
+
+.app-sidebar nav:last-child ul li .add-btn{
+    background-color: #A3A3A3;
+    display: inline-block;
+    text-align: center;
+    width: 50px;
+    font-size: 40px;
+    color: black;
+
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.app-sidebar nav:last-child ul .btn-container a{
+    font-weight: bold;
+}
+
+.app-sidebar nav:last-child ul > div li{
+    margin-block: 20px;
+}
+
+
+
+
+
+
+
+
+/***************************************************************************** 
+MEDIA 
+******************************************************************************/
+
+@media screen and (max-width: 552px){
+    .app-sidebar{
+        width: 80px;
+    }
+
+    .app-sidebar nav:last-child{
+        display: none;
+    }
+
+    .app-sidebar nav:first-child > img:first-child{
+        display: none;
+    }
+
+    .app-sidebar nav ul li a > img{
+        margin: 0;
+        display: flex;
+    }
+
+    .app-sidebar nav ul{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .app-sidebar nav .sm-logo {
+        display: block;
+        width:50px;
+        margin-bottom: 10px;
+        margin-left: 3px;
+    }
+
+    .app-sidebar nav ul li{
+        margin-block: 5px;
+    }
+
+    .app-sidebar nav ul li a span{
+        display: none;
+    }
 }

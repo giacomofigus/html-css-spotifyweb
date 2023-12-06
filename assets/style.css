@@ -25,7 +25,7 @@ img{
 /* LAYOUT SPOTIFY */
 .app-container{
     height: 100vh;
-    border: 1px solid white;
+    border: 2px solid red;
 }
 
 .app-top-container{
@@ -33,13 +33,14 @@ img{
     height: calc(100% - 130px);
 
     display: flex;
+    
 }
 
 .app-sidebar{
     background: black;
     width: 250px;
     height: 100%;
-    
+    z-index: 1;
 }
 
 .app-bottom-bar{
@@ -50,18 +51,28 @@ img{
 
 .app-main-container{
     width: 100%;
-
-    border: 1px solid purple;
 }
 
 .app-main-container .upgrade-bar{
     background-color: rgba(8, 11, 18, 0.7);
     height: 100px;
+
+    position: fixed;
+    right: 0;
+    left:0;
+    top: 0;
 }
 
-.app-main-container .playlist-container{
-    padding-top: 100px;
+.playlist-container{
+    border: 1px solid red;
+    height: 100%;
+    overflow: auto;
+    padding-top: 120px;
+    padding-inline: 30px;
 }
+
+
+
 
 
 /*********** SIDEBAR CONTENT ***********/
@@ -140,7 +151,7 @@ img{
 }
 
 
-/* UPGRADE BAR CONTENT */
+/***************** UPGRADE BAR CONTENT *****************/
 .upgrade-bar{
     display: flex;
     align-items: center;
@@ -160,6 +171,68 @@ img{
 }
 
 
+
+/***************** PLAYLIST CONTAINER CONTENT **************/
+/* Playlist Nav */
+.playlist-nav{
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 30px;
+}
+
+.playlist-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;  
+}
+
+.playlist-nav ul li a{
+    color: white;
+    opacity: 0.5;
+    font-weight: 600;
+}
+
+.playlist-container h2{
+    color: white;
+    font-size: 30px;
+}
+
+
+/* Albums - discos */
+.albums{
+    display: flex;
+    
+
+    margin-top: 20px;
+}
+
+.albums .disco{
+    text-align: center;
+    color: white;
+    width: 200px;
+
+}
+
+.albums .disco figure{
+    border: 1px solid lime;
+    width: 200px;
+}
+
+.albums .disco figure img{
+    width: 100%;
+}
+
+.albums .disco h4{
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.albums .disco p{
+    opacity: 0.5;
+    margin-top: 10px;
+}
 
 
 

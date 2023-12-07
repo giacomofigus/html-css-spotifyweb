@@ -9,6 +9,10 @@ html{
     font-family: sans-serif;
 }
 
+body{
+    height: 100vh;    
+}
+
 ul{
     list-style-type: none;
 }
@@ -22,33 +26,57 @@ img{
 }
 
 
+/* UTILITY */
+.audio-bar{
+    height: 5px;
+    width: 500px;
+
+    border-radius: 50px;
+
+    background-color: grey;
+    margin-inline: 10px;
+}
+
+.white-audio-bar{
+    height: 100%;
+    width: 20%;
+    background-color: white;
+}
+
+
+
 /* LAYOUT SPOTIFY */
 .app-container{
     height: 100vh;
+    
 }
 
 .app-top-container{
-    background: #141821ff;
+    background: #141821;
     height: calc(100% - 130px);
 
     display: flex;
-    
 }
 
 .app-sidebar{
     background: black;
-    width: 250px;
+    width: 200px;
     height: 100%;
 }
 
 .app-bottom-bar{
-    background-color: #292929ff;
+    background-color: #292929;
     height: 130px;
-    
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
 }
 
 .app-main-container{
-    width: 100%;
+    width: calc(100% - 200px);
 }
 
 .app-main-container .upgrade-bar{
@@ -56,8 +84,8 @@ img{
     height: 100px;
 
     position: fixed;
+    left: 200px;
     right: 0;
-    left:0;
     top: 0;
 }
 
@@ -74,78 +102,7 @@ img{
 
 /*********** SIDEBAR CONTENT ***********/
 
-.app-sidebar nav > img{
-    width: 140px;
-    padding-left: 18px;
-    padding-top: 15px;
-}
 
-.app-sidebar nav .sm-logo {
-    display: none;
-}
-
-.app-sidebar nav ul{
-    margin-top: 10px;
-
-    width: 100%;
-}
-
-.app-sidebar nav ul li a{
-    display: flex;
-    align-items: center;
-
-    font-size: 15px;
-    color: #666666;
-    font-weight: 600;
-
-    padding-left: 20px;
-}
-
-.app-sidebar nav ul .home{
-    border-left: 2px solid #abff2eff;
-}
-
-.app-sidebar nav ul li a > img{
-    margin-block: 5px;
-    margin-right: 10px;
-    width: 28px;
-}
-
-/* middle navigation bar */
-.app-sidebar nav:last-child {
-    color: white;
-    margin-top: 20px;
-}
-
-.app-sidebar nav:last-child .title-nav{
-    margin-left: 20px;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.app-sidebar nav:last-child ul .btn-container{
-    display: flex;
-}
-
-.app-sidebar nav:last-child ul li .add-btn{
-    background-color: #A3A3A3;
-    display: inline-block;
-    text-align: center;
-    width: 50px;
-    font-size: 40px;
-    color: black;
-
-    margin-left: 20px;
-    padding-left: 0;
-}
-
-.app-sidebar nav:last-child ul .btn-container a{
-    font-weight: bold;
-}
-
-.app-sidebar nav:last-child ul > div li{
-    margin-block: 20px;
-}
 
 
 /***************** UPGRADE BAR CONTENT *****************/
@@ -240,6 +197,77 @@ img{
 .radius-img img{
     border-radius: 50%;
 }
+
+
+
+/* BOTTOM BAR */
+.left-block{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: white;
+}
+
+.left-block figure img{
+    width: 90px;
+    margin-right: 10px;
+}
+
+.left-block .song-title{
+    margin-right: 10px;
+}
+
+.left-block .song-title p{
+    opacity: 0.5;
+}
+
+.left-block .btn i{
+   opacity: 0.5;
+   padding-inline: 5px;
+}
+
+
+.middle-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-inline: 30px ;
+}
+
+.middle-block .top-block i{
+    padding-inline: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.middle-block .top-block .fa-circle-play{
+    font-size: 30px;
+}
+
+.middle-block .bottom-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin-top: 20px;
+    color: white;
+}
+
+.right-block{
+    display: flex;
+    align-items: center;
+}
+
+.right-block i{
+    padding-inline: 10px;
+    color: white;
+}
+
+.right-block .audio-bar{
+    width: 100px;
+}
+
 
 
 

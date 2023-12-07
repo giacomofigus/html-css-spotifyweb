@@ -110,32 +110,40 @@ img{
     width: 100%;
     height: calc(100% - 100px);
     /* border: 1px solid lime; */
+    overflow: hidden;
 }
 
 .bottom-sidebar{
-    /* border: 1px solid lime; */
     width: 100%;
     height: 100px ;
+    overflow: hidden; 
 }
 
-.top-sidebar nav{
+/* TOP SIDEBAR */
+.top-sidebar nav:first-child{
     width: 100%;
     padding-top: 10px;
 }
 
-.top-sidebar nav > img{
+.top-sidebar nav > img:first-child{
     width: 160px;
     padding-left: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.top-sidebar nav:first-child .logo-sm{
+    display: none;
 }
 
 .top-sidebar nav ul{
     display: flex;
     flex-direction: column;
     gap: 5px;
+
+    width: 100%;
 }
 
-.top-sidebar nav ul li a{
+.top-sidebar nav:first-child ul li a{
     display: flex;
     align-items: center;
     gap: 10px;
@@ -147,21 +155,21 @@ img{
     color: white;
 }
 
-.top-sidebar nav ul li a > img{
+.top-sidebar nav:first-child ul li a > img{
     opacity: 0.5;
 }
 
-.top-sidebar nav ul li a span{
+.top-sidebar nav:first-child ul li a span{
     opacity: 0.5;
 }
 
-.top-sidebar nav ul li:first-child {
+.top-sidebar nav:first-child ul li:first-child {
     border-left: 4px solid #abff2e;
     opacity: 1
 }
 
 /* QUESTO SELETTORE SERVER PERCHE QUANDO AGGIUNGO IL BORDER AL PRIMO LI, LO SPOSTA AUTOMATICAMENTE A DESTRA DI QUALCHE PX, QUINDI PER DARE LO STESSO ALLINEAMENTO L'HO AGGIUNTO A TUTTI RENDENDO PERò GLI ULTIMI NERI */
-.top-sidebar nav ul li:not(li:first-child){
+.top-sidebar nav:first-child ul li:not(li:first-child){
     border-left: 4px solid black;
 }
 
@@ -169,14 +177,87 @@ img{
     width: 30px;
 }
 
+/* PLAYLIST SIDEBAR */
+.top-sidebar .sidebar-playlist{
+    color: white;
+    padding-left: 25px;
+    margin-top: 30px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.top-sidebar .sidebar-playlist i{
+    background-color: grey;
+    color: black;
+    padding: 10px;
+}
+
+.top-sidebar .sidebar-playlist span{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.top-sidebar .sidebar-playlist ul{
+    height: 200px;
+    overflow: auto;
+    margin-top: 10px;
+}
+
+.top-sidebar .sidebar-playlist ul li{
+   margin-block: 5px;  
+}    
+   
+.top-sidebar .sidebar-playlist ul li a{
+    color: white;
+    opacity: 0.5;
+}
+
+/* BOTTOM SIDEBAR */
+.bottom-sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    padding-inline: 20px;
+    color: white;
+}
+
+.bottom-sidebar > div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.bottom-sidebar > div img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.bottom-sidebar > div:first-child{
+    opacity: 0.5;
+    border-bottom: 1px solid grey;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.bottom-sidebar > div:last-child img{
+    background-color: grey;
+    border-radius: 50%;
+}
+
 /* hover */
-nav ul li a span:hover{
+nav:first-child ul li a span:hover,
+.top-sidebar nav ul li a > img:hover,
+.top-sidebar .sidebar-playlist ul li a:hover{
     opacity: 1;
 }
 
-.top-sidebar nav ul li a > img:hover {
-    opacity: 1;
-}
+
 
 
 /***************** UPGRADE BAR CONTENT *****************/
@@ -385,6 +466,25 @@ MEDIA
         width: 80px;
     }
 
+    .top-sidebar nav > img:first-child{
+        display: none;
+    }
+    
+    .top-sidebar nav:first-child .logo-sm{
+        display: block;
+        width: 40px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .top-sidebar nav ul li a span{
+        display: none;
+    }
+
+    .top-sidebar .sidebar-playlist{
+        display: none;
+    }
+
 
     .app-main-container{
         width: calc(100% - 80px);
@@ -414,6 +514,18 @@ MEDIA
     }
 
     .app-bottom-bar .right-block .audio-bar{
+        display: none;
+    }
+
+    .bottom-sidebar > div{
+        justify-content: center;
+    }
+
+    .bottom-sidebar > div img{
+        width: 40px;
+    }
+
+    .bottom-sidebar > div span{
         display: none;
     }
 }

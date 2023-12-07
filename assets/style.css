@@ -211,10 +211,14 @@ img{
     color: white;
 }
 
+.left-block figure{
+    width: 90px;
+    margin-right: 10px;
+}
 
 .left-block  img{
     margin-right: 10px;
-    width: 20%;
+    width: 100%;
     
 }
 
@@ -237,8 +241,6 @@ img{
     flex-direction: column;
     align-items: center;
     flex-basis: 50%;
-
-    border: 1px solid red;
 }
 
 .middle-block .top-block i{
@@ -257,8 +259,8 @@ img{
     align-items: center;
     
     margin-top: 20px;
+    width: 100%;
     color: white;
-    border: 1px solid blue;
 }
 
 .middle-block .bottom-block .audio-bar{
@@ -274,8 +276,8 @@ img{
 .right-block{
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     flex-basis: 25%;
-    
 }
 
 .right-block i{
@@ -284,7 +286,13 @@ img{
 }
 
 .right-block .audio-bar{
-    width: 100%;
+    width: 30%;
+    height: 5px;
+
+    border-radius: 50px;
+
+    background-color: grey;
+    margin-inline: 10px;
 }
 
 
@@ -298,6 +306,8 @@ MEDIA
 ******************************************************************************/
 
 @media screen and (max-width: 552px){
+
+    /* SIDEBAR */
     .app-sidebar{
         width: 80px;
     }
@@ -341,10 +351,14 @@ MEDIA
         width: calc(100% - 80px);
     }
 
+
+    /* UPGRADE BAR */
     .app-main-container .upgrade-bar{
        left: 80px;
     }
 
+
+    /* MAIN ALBUMS SECTION */
     .albums .disco{
         width: calc(100% / 2 - 20px);
     }
@@ -352,6 +366,16 @@ MEDIA
     .playlist-container h2{
         color: white;
         font-size: 20px;
+    }
+
+
+    /* BOTTOMBAR */
+    .app-bottom-bar .left-block {
+        font-size: 16px;
+    }
+
+    .app-bottom-bar .right-block .audio-bar{
+        display: none;
     }
 }
 
